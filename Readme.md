@@ -4,18 +4,18 @@
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 <!-- default badges end -->
 
-# File Manager for ASP.NET Web Forms - How to open the selected document
+# File Manager for ASP.NET Web Forms - How to open the selected file
 <!-- run online -->
 **[[Run Online]](https://codecentral.devexpress.com/t318308/)**
 <!-- run online end -->
 
-This example demonstrates how to open a file selected in [ASPxFileManager](https://docs.devexpress.com/AspNet/DevExpress.Web.ASPxFileManager) in [ASPxSpreadsheet](https://docs.devexpress.com/AspNet/DevExpress.Web.ASPxSpreadsheet.ASPxSpreadsheet) or [ASPxRichEdit](https://docs.devexpress.com/AspNet/DevExpress.Web.ASPxRichEdit.ASPxRichEdit) component. 
+This example demonstrates how to open a selected file in [ASPxSpreadsheet](https://docs.devexpress.com/AspNet/DevExpress.Web.ASPxSpreadsheet.ASPxSpreadsheet) or [ASPxRichEdit](https://docs.devexpress.com/AspNet/DevExpress.Web.ASPxRichEdit.ASPxRichEdit) component. 
 
 ![](file-manager-and-spreadsheet.png)
 
 ## Implementation Details
 
-In this example, [ASPxFileManager](https://docs.devexpress.com/AspNet/DevExpress.Web.ASPxFileManager) contains files that can be opened in ASPxSpreadsheet or ASPxRichEdit component. When a user clicks a file, the [ASPxClientFileManager.SelectedFileChanged](https://docs.devexpress.com/AspNet/js-ASPxClientFileManager.SelectedFileChanged) event fires. The event handler shows a popup and sends callback to server.
+In this example, [ASPxFileManager](https://docs.devexpress.com/AspNet/DevExpress.Web.ASPxFileManager) contains files that can be opened in [ASPxSpreadsheet](https://docs.devexpress.com/AspNet/DevExpress.Web.ASPxSpreadsheet.ASPxSpreadsheet) or [ASPxRichEdit](https://docs.devexpress.com/AspNet/DevExpress.Web.ASPxRichEdit.ASPxRichEdit) component. When a user clicks a file, the [ASPxClientFileManager.SelectedFileChanged](https://docs.devexpress.com/AspNet/js-ASPxClientFileManager.SelectedFileChanged) event fires. The event handler shows a popup and sends callback to server.
 
 ```jscript
 function OnSelectedFileChanged(s, e) {
