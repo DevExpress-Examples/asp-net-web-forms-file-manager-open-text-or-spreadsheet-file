@@ -4,7 +4,7 @@
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 <!-- default badges end -->
 
-# File Manager for ASP.NET Web Forms - How to open the selected file
+# File Manager for ASP.NET Web Forms - How to open a selected file
 <!-- run online -->
 **[[Run Online]](https://codecentral.devexpress.com/t318308/)**
 <!-- run online end -->
@@ -25,7 +25,7 @@ function OnSelectedFileChanged(s, e) {
     }
 }
 ```
-On the server, the OnWindowCallback event handler determines a format of the selected file and opens the file in [ASPxSpreadsheet](https://docs.devexpress.com/AspNet/DevExpress.Web.ASPxSpreadsheet.ASPxSpreadsheet) component for [spreadcheet formats](https://docs.devexpress.com/OfficeFileAPI/DevExpress.Spreadsheet.DocumentFormat._members#fields); otherwise the document id opened in [ASPxRichEdit](https://docs.devexpress.com/AspNet/DevExpress.Web.ASPxRichEdit.ASPxRichEdit).
+On the server, the [WindowCallback](https://docs.devexpress.com/AspNet/DevExpress.Web.ASPxPopupControlBase.WindowCallback) event handler determines a format of the selected file and opens the file in the [ASPxSpreadsheet](https://docs.devexpress.com/AspNet/DevExpress.Web.ASPxSpreadsheet.ASPxSpreadsheet) component for [spreadcheet formats](https://docs.devexpress.com/OfficeFileAPI/DevExpress.Spreadsheet.DocumentFormat._members#fields); otherwise the document is opened in the [ASPxRichEdit](https://docs.devexpress.com/AspNet/DevExpress.Web.ASPxRichEdit.ASPxRichEdit) component.
 
 ```scharp
 protected void PopupWithDocument_WindowCallback(object source, DevExpress.Web.PopupWindowCallbackArgs e) {
