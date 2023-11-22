@@ -11,7 +11,7 @@
     <script type="text/javascript">
         function OnSelectedFileChanged(s, e) {
         	if (e.file != null) {
-        		PopupWithDocument.Show();
+                PopupWithDocument.Show();
                 PopupWithDocument.PerformCallback(e.file.GetFullName());
             }
         }
