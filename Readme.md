@@ -54,4 +54,4 @@ else
 
 ## More Examples
 
-* []()
+* [File Manager for ASP.NET Web Forms - How to implement a custom document management for different document types](https://github.com/DevExpress-Examples/asp-net-web-forms-file-manager-custom-document-management)
