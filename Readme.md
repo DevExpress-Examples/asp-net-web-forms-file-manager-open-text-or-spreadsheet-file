@@ -3,7 +3,7 @@
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 <!-- default badges end -->
 
-# File Manager for ASP.NET Web Forms - How to open a selected file
+# File Manager for ASP.NET Web Forms - How to open a selected text or spreadsheet file
 <!-- run online -->
 **[[Run Online]](https://codecentral.devexpress.com/t318308/)**
 <!-- run online end -->
