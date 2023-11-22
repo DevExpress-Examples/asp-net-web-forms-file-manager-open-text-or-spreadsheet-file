@@ -4,12 +4,12 @@
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 <!-- default badges end -->
 
-# File Manager for ASP.NET Web Forms - How to open office documents
+# File Manager for ASP.NET Web Forms - How to open office documents in ASPxSpreadsheet or ASPxRichEdit
 <!-- run online -->
 **[[Run Online]](https://codecentral.devexpress.com/t318308/)**
 <!-- run online end -->
 
-This example demonstrates how to open a file selected in [ASPxFileManager]. 
+This example demonstrates how to open a file selected in [ASPxFileManager](https://docs.devexpress.com/AspNet/DevExpress.Web.ASPxFileManager) in [ASPxSpreadsheet](https://docs.devexpress.com/AspNet/DevExpress.Web.ASPxSpreadsheet.ASPxSpreadsheet) or [ASPxRichEdit](https://docs.devexpress.com/AspNet/DevExpress.Web.ASPxRichEdit.ASPxRichEdit) component. 
 
 ![](file-manager-and-spreadsheet.png)
 
