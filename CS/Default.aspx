@@ -10,7 +10,7 @@
 <head runat="server">
     <script type="text/javascript">
         function OnSelectedFileChanged(s, e) {
-        	if (e.file != null) {
+            if (e.file != null) {
                 PopupWithDocument.Show();
                 PopupWithDocument.PerformCallback(e.file.GetFullName());
             }
