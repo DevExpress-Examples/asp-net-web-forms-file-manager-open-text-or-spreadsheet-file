@@ -3,21 +3,56 @@
 [![](https://img.shields.io/badge/Open_in_DevExpress_Support_Center-FF7200?style=flat-square&logo=DevExpress&logoColor=white)](https://supportcenter.devexpress.com/ticket/details/T318308)
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 <!-- default badges end -->
-<!-- default file list -->
-*Files to look at*:
 
-* [DocumentFormatHelper.cs](./CS/App_Code/DocumentFormatHelper.cs) (VB: [DocumentFormatHelper.vb](./VB/App_Code/DocumentFormatHelper.vb))
-* [Default.aspx](./CS/Default.aspx) (VB: [Default.aspx](./VB/Default.aspx))
-* [Default.aspx.cs](./CS/Default.aspx.cs) (VB: [Default.aspx.vb](./VB/Default.aspx.vb))
-<!-- default file list end -->
-# How to open documents using ASPxFileManager 
+# File Manager for ASP.NET Web Forms - How to open office documents
 <!-- run online -->
 **[[Run Online]](https://codecentral.devexpress.com/t318308/)**
 <!-- run online end -->
 
+This example demonstrates how to open a file selected in [ASPxFileManager]. 
 
-<p>This example demonstrates how to open a file which is selected in ASPxFileManager. The <a href="https://documentation.devexpress.com/#AspNet/DevExpressWebScriptsASPxClientFileManager_SelectedFileChangedtopic">ASPxClientFileManager.SelectedFileChanged</a> event is handled to send a callback to the server, and open the file using ASPxSpreadsheet or ASPxRichEdit inside a popup.</p>
+![](file-manager-and-spreadsheet.png)
 
-<br/>
+## Implementation Details
 
+In this example, [ASPxFileManager](https://docs.devexpress.com/AspNet/DevExpress.Web.ASPxFileManager) contains files that can be opened in ASPxSpreadsheet or ASPxRichEdit component. When a user clicks a file, the [ASPxClientFileManager.SelectedFileChanged](https://docs.devexpress.com/AspNet/js-ASPxClientFileManager.SelectedFileChanged) event fires. The event handler shows a popup and sends callback to server.
 
+```jscript
+function OnSelectedFileChanged(s, e) {
+    if (e.file != null) {
+        PopupWithDocument.Show();
+        PopupWithDocument.PerformCallback(e.file.GetFullName());
+    }
+}
+```
+On the server, the OnWindowCallback event handler determines a format of the selected file and opens the file in [ASPxSpreadsheet](https://docs.devexpress.com/AspNet/DevExpress.Web.ASPxSpreadsheet.ASPxSpreadsheet) component for [spreadcheet formats](https://docs.devexpress.com/OfficeFileAPI/DevExpress.Spreadsheet.DocumentFormat._members#fields); otherwise the document id opened in [ASPxRichEdit](https://docs.devexpress.com/AspNet/DevExpress.Web.ASPxRichEdit.ASPxRichEdit).
+
+```scharp
+protected void PopupWithDocument_WindowCallback(object source, DevExpress.Web.PopupWindowCallbackArgs e) {
+String fullFileName = e.Parameter;
+
+object format = DocumentFormatHelper.GetFormat(fullFileName);
+if (format == null) return;
+
+Boolean isSpreadsheet = format is DevExpress.Spreadsheet.DocumentFormat;
+ASPxSpreadsheet1.Visible = isSpreadsheet;
+ASPxRichEdit1.Visible = !isSpreadsheet;
+
+var docId = Guid.NewGuid().ToString();
+var docPath =  Server.MapPath(fullFileName);
+
+if (isSpreadsheet)
+  ASPxSpreadsheet1.Open(docId, (DevExpress.Spreadsheet.DocumentFormat)format, () => File.ReadAllBytes(docPath));
+else
+  ASPxRichEdit1.Open(docId, (DevExpress.XtraRichEdit.DocumentFormat)format, () => File.ReadAllBytes(docPath));
+}
+```
+
+## Files to Review
+
+* [Default.aspx](./CS/Default.aspx) (VB: [Default.aspx](./VB/Default.aspx))
+* [Default.aspx.cs](./CS/Default.aspx.cs) (VB: [Default.aspx.vb](./VB/Default.aspx.vb))
+
+## More Examples
+
+* []()
