@@ -4,7 +4,7 @@
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 <!-- default badges end -->
 
-# File Manager for ASP.NET Web Forms - How to open office documents in ASPxSpreadsheet or ASPxRichEdit
+# File Manager for ASP.NET Web Forms - How to open the selected document
 <!-- run online -->
 **[[Run Online]](https://codecentral.devexpress.com/t318308/)**
 <!-- run online end -->
