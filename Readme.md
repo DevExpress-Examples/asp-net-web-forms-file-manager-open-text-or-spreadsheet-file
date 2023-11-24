@@ -8,7 +8,7 @@
 **[[Run Online]](https://codecentral.devexpress.com/t318308/)**
 <!-- run online end -->
 
-This example demonstrates how to open a selected file in [ASPxSpreadsheet](https://docs.devexpress.com/AspNet/DevExpress.Web.ASPxSpreadsheet.ASPxSpreadsheet) or [ASPxRichEdit](https://docs.devexpress.com/AspNet/DevExpress.Web.ASPxRichEdit.ASPxRichEdit) component. 
+This example demonstrates how to open a selected file in the [ASPxSpreadsheet](https://docs.devexpress.com/AspNet/DevExpress.Web.ASPxSpreadsheet.ASPxSpreadsheet) or [ASPxRichEdit](https://docs.devexpress.com/AspNet/DevExpress.Web.ASPxRichEdit.ASPxRichEdit) component.
 
 ![](file-manager-and-spreadsheet.png)
 
