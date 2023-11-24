@@ -6,7 +6,7 @@
 
 # File Manager for ASP.NET Web Forms - How to open a selected text or spreadsheet file
 <!-- run online -->
-**[[Run Online]](https://codecentral.devexpress.com/t318308/)**
+**[[Run Online]](https://codecentral.devexpress.com/128564779/)**
 <!-- run online end -->
 
 This example demonstrates how to open a selected file in the [ASPxSpreadsheet](https://docs.devexpress.com/AspNet/DevExpress.Web.ASPxSpreadsheet.ASPxSpreadsheet) or [ASPxRichEdit](https://docs.devexpress.com/AspNet/DevExpress.Web.ASPxRichEdit.ASPxRichEdit) component.
