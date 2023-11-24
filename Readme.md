@@ -14,7 +14,7 @@ This example demonstrates how to open a selected file in the [ASPxSpreadsheet](h
 
 ## Implementation Details
 
-In this example, [ASPxFileManager](https://docs.devexpress.com/AspNet/DevExpress.Web.ASPxFileManager) contains files that can be opened in [ASPxSpreadsheet](https://docs.devexpress.com/AspNet/DevExpress.Web.ASPxSpreadsheet.ASPxSpreadsheet) or [ASPxRichEdit](https://docs.devexpress.com/AspNet/DevExpress.Web.ASPxRichEdit.ASPxRichEdit) component. When a user clicks a file, the [ASPxClientFileManager.SelectedFileChanged](https://docs.devexpress.com/AspNet/js-ASPxClientFileManager.SelectedFileChanged) event fires. The event handler shows a popup and sends callback to server.
+In this example, [ASPxFileManager](https://docs.devexpress.com/AspNet/DevExpress.Web.ASPxFileManager) contains files that can be opened in the [ASPxSpreadsheet](https://docs.devexpress.com/AspNet/DevExpress.Web.ASPxSpreadsheet.ASPxSpreadsheet) or [ASPxRichEdit](https://docs.devexpress.com/AspNet/DevExpress.Web.ASPxRichEdit.ASPxRichEdit) component. When a user clicks a file, the [ASPxClientFileManager.SelectedFileChanged](https://docs.devexpress.com/AspNet/js-ASPxClientFileManager.SelectedFileChanged) event fires. The event handler shows a popup and sends a callback to the server.
 
 ```jscript
 function OnSelectedFileChanged(s, e) {
@@ -24,7 +24,7 @@ function OnSelectedFileChanged(s, e) {
     }
 }
 ```
-On the server, the [WindowCallback](https://docs.devexpress.com/AspNet/DevExpress.Web.ASPxPopupControlBase.WindowCallback) event handler determines a format of the selected file and opens the file in the [ASPxSpreadsheet](https://docs.devexpress.com/AspNet/DevExpress.Web.ASPxSpreadsheet.ASPxSpreadsheet) component for [spreadcheet formats](https://docs.devexpress.com/OfficeFileAPI/DevExpress.Spreadsheet.DocumentFormat._members#fields); otherwise the document is opened in the [ASPxRichEdit](https://docs.devexpress.com/AspNet/DevExpress.Web.ASPxRichEdit.ASPxRichEdit) component.
+On the server, the [WindowCallback](https://docs.devexpress.com/AspNet/DevExpress.Web.ASPxPopupControlBase.WindowCallback) event handler determines the format of the selected file and opens the file in the [ASPxSpreadsheet](https://docs.devexpress.com/AspNet/DevExpress.Web.ASPxSpreadsheet.ASPxSpreadsheet) component if it is a [spreadsheet format](https://docs.devexpress.com/OfficeFileAPI/DevExpress.Spreadsheet.DocumentFormat._members#fields); otherwise the document is opened in the [ASPxRichEdit](https://docs.devexpress.com/AspNet/DevExpress.Web.ASPxRichEdit.ASPxRichEdit) component.
 
 ```scharp
 protected void PopupWithDocument_WindowCallback(object source, DevExpress.Web.PopupWindowCallbackArgs e) {
@@ -54,4 +54,4 @@ else
 
 ## More Examples
 
-* [File Manager for ASP.NET Web Forms - How to implement a custom document management for different document types](https://github.com/DevExpress-Examples/asp-net-web-forms-file-manager-custom-document-management)
+* [File Manager for ASP.NET Web Forms - How to implement custom document management for different document types](https://github.com/DevExpress-Examples/asp-net-web-forms-file-manager-custom-document-management)
