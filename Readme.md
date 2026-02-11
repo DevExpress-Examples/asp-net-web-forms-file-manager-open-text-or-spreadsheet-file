@@ -55,7 +55,7 @@ else
 
 * [File Manager for ASP.NET Web Forms - How to implement custom document management for different document types](https://github.com/DevExpress-Examples/asp-net-web-forms-file-manager-custom-document-management)
 <!-- feedback -->
-## Does This Example Address Your Development Requirements/Objectives?
+## Does this example address your development requirements/objectives?
 
 [<img src="https://www.devexpress.com/support/examples/i/yes-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=asp-net-web-forms-file-manager-open-text-or-spreadsheet-file&~~~was_helpful=yes) [<img src="https://www.devexpress.com/support/examples/i/no-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=asp-net-web-forms-file-manager-open-text-or-spreadsheet-file&~~~was_helpful=no)
 
